@@ -9,7 +9,7 @@ public class RockPaperScissors {
         int roundsCount;
 
         // Declare a variable for one of three choices
-        int choiceChosen;
+        int myChoiceChosen;
 
         // Declare a variable to hold the computer's choice
         int computerChosen;
@@ -33,34 +33,87 @@ public class RockPaperScissors {
             for(int i = 1; i <= roundsCount; i ++) {
                 // Ask for the user's input
                 System.out.println("Game " + i + "\n Select your choice: 1 for Rock, 2 for Paper, and 3 for Scissors ");
-                choiceChosen = myChoice.nextInt();
-                switch(choiceChosen) {
+                myChoiceChosen = myChoice.nextInt();
+                switch(myChoiceChosen) {
                     case 1:
-                        choiceChosen = 1;
+                        myChoiceChosen = 1;
                         System.out.println("You chose: Rock");
                         break;
                     case 2:
-                        choiceChosen = 2;
+                        myChoiceChosen = 2;
                         System.out.println("You chose: Paper");
                         break;
                     case 3:
-                        choiceChosen = 3;
+                        myChoiceChosen = 3;
                         System.out.println("You chose: Scissor");
+                        break;
                 }
 
-                // Check if user select a valid input
-                if (choiceChosen != 1 || choiceChosen != 2 || choiceChosen != 3);
-                    System.out.println("Please enter a valid number!");
+                // Check if user select a valid input (I don't know why this code doesn't work
+                if (myChoiceChosen != 1 || myChoiceChosen != 2 || myChoiceChosen != 3);
+                    System.out.println("You entered an incorrect number!");
 
                 // After the computer asks for the user's input, the computer randomly chooses Rock, Paper, Scissors
                 computerChosen = computerChoice.nextInt(3) + 1;
                 switch (computerChosen) {
                     case 1:
                         computerChosen = 1;
-                        System.out.println("");
+                        System.out.println("Other player chose: Rock");
+                        break;
+
+                    case 2:
+                        computerChosen = 2;
+                        System.out.println("Other player chose: Paper");
+                        break;
+
+                    case 3:
+                        computerChosen = 3;
+                        System.out.println("Other player chose: Scissor");
+                        break;
+                }
+
+                // Check conditions and Display the result
+                if (myChoiceChosen == 1 && computerChosen == 1) {
+                    System.out.println("Winner: Tie!");
+                    totalTies++;
+                }
+                if (myChoiceChosen == 2 && computerChosen ==2) {
+                    System.out.println("Winner: Tie!");
+                    totalTies++;
+                }
+                if (myChoiceChosen ==3 && computerChosen == 3) {
+                    System.out.println("Winner: Tie!");
+                    totalTies++;
+                }
+                if (myChoiceChosen == 1 && computerChosen == 2) {
+                    System.out.println("Winner: Computer");
+                    totalComputerWins++;
+                }
+                if (myChoiceChosen == 1 && computerChosen == 3) {
+                    System.out.println("Winner: User!");
+                    totalUserWins++;
+                }
+                if (myChoiceChosen == 2 && computerChosen == 1) {
+                    System.out.println("Winner: User!");
+                    totalUserWins++;
+                }
+                if (myChoiceChosen == 2 && computerChosen == 3) {
+                    System.out.println("Winner: Computer!");
+                    totalComputerWins++;
+                }
+                if (myChoiceChosen == 3 && computerChosen == 1) {
+                    System.out.println("Winner: Computer!");
+                    totalComputerWins++;
+                }
+                if (myChoiceChosen == 3 && computerChosen == 2) {
+                    System.out.println("Winner: User!");
+                    totalUserWins++;
                 }
             }
-
+        // Print out number of ties, user wins, and computer wins
+            System.out.println("Total user wins: " + totalUserWins);
+            System.out.println("Total computer wins: " + totalComputerWins);
+            System.out.println("Total ties: " + totalTies);
 
         }
     }
