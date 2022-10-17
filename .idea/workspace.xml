@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30ed6298-eed4-43a6-b4d0-8dfac77c90a7" name="Changes" comment="">
+    <list default="true" id="30ed6298-eed4-43a6-b4d0-8dfac77c90a7" name="Changes" comment="Initial Commit, Create a class, README file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RockPaperScissors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RockPaperScissors.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +44,14 @@
       <option name="presentableId" value="Default" />
       <updated>1665975872031</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit, Create a class, README file">
+      <created>1665977636089</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665977636089</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -57,5 +64,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit, Create a class, README file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit, Create a class, README file" />
   </component>
 </project>
