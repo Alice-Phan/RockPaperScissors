@@ -33,7 +33,7 @@ public class RockPaperScissors {
             for(int i = 1; i <= roundsCount; i ++) {
                 // Ask for the user's input
                 System.out.println("Game " + i + "\n Select your choice: 1 for Rock, 2 for Paper, and 3 for Scissors ");
-                myChoiceChosen = myChoice.nextInt();
+                 myChoiceChosen = myChoice.nextInt();
                 switch(myChoiceChosen) {
                     case 1:
                         myChoiceChosen = 1;
@@ -50,8 +50,8 @@ public class RockPaperScissors {
                 }
 
                 // Check if user select a valid input (I don't know why this code doesn't work
-                if (myChoiceChosen != 1 || myChoiceChosen != 2 || myChoiceChosen != 3);
-                    System.out.println("You entered an incorrect number!");
+                if (myChoiceChosen != 1 || myChoiceChosen != 2 || myChoiceChosen != 3)
+                    System.out.println("Please enter a valid number!");
 
                 // After the computer asks for the user's input, the computer randomly chooses Rock, Paper, Scissors
                 computerChosen = computerChoice.nextInt(3) + 1;
@@ -115,7 +115,28 @@ public class RockPaperScissors {
             System.out.println("Total computer wins: " + totalComputerWins);
             System.out.println("Total ties: " + totalTies);
 
+        // Display overall winner
+
+            if  (totalUserWins > totalComputerWins)
+                System.out.println("\n Overall winner: User");
+            if (totalUserWins < totalComputerWins)
+                System.out.println("Overall winner: Computer");
+            if (totalUserWins == totalComputerWins)
+                System.out.println("Overall winner: No winner");
+
+        // The computer asks if the user wants to play again
+            System.out.println("Would you like to play the game again? 'Y' or 'N'?");
+                String answerQuestion = myChoice.nextLine();
+            if (myChoice.nextLine().equals("Y")) {
+                continue;
+            }
+
+            else {
+                System.out.println("Thanks for playing!");
+                break;
+            }
         }
+
     }
 }
 
